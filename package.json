@@ -1,0 +1,23 @@
+{
+  "name": "ekofe-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Johannes Reuter <flash1293@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "DEBUG=info nodemon src/index.js",
+    "start": "DEBUG=info node src/index.js"
+  },
+  "engines": {
+    "node": "8.15.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "debug": "^3.1.0",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5"
+  }
+}
