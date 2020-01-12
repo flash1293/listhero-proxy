@@ -5,17 +5,20 @@
   "author": "Johannes Reuter <flash1293@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "DEBUG=info nodemon src/index.js",
-    "start": "DEBUG=info node src/index.js"
+    "dev": "DEBUG=debug,info,error,express-http-proxy nodemon src/index.js",
+    "start": "DEBUG=info,error node src/index.js"
   },
   "engines": {
-    "node": "8.15.0"
+    "node": ">= 8.15.0"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.5",
     "debug": "^3.1.0",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.6.0",
+    "express-ws": "^4.0.0",
+    "ws": "^7.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.12.5"
