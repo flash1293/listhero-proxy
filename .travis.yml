@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+ - "8"
+sudo: enabled
+branches:
+  only:
+   - master
+
+services:
+ - docker
+
+script:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker build -t listhero-proxy .
+  - docker images
+  - docker tag listhero-proxy $DOCKER_USERNAME/listhero-proxy
+  - docker push $DOCKER_USERNAME/listhero-proxy
